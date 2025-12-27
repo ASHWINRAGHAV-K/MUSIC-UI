@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify-like Music Player UI</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #fff;
+        display: flex;
+        height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #1e1e1e;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar h2 {
+        margin-top: 0;
+        color: #1db954;
+    }
+
+    .sidebar input {
+        padding: 8px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .song-list {
+        flex-grow: 1;
+        overflow-y: auto;
+        margin-top: 10px;
+    }
+
+    .song-list div {
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #333;
+    }
+
+    .song-list div:hover {
+        background-color: #333;
+    }
+
+    .main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .cover img {
+        width: 300px;
+        border-radius: 10px;
+    }
+
+    .song-info {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .song-info h2 {
+        margin: 5px 0;
+    }
+
+    .song-info p {
+        margin: 0;
+        color: #b3b3b3;
+    }
+
+    .controls {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .controls button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .controls button:hover {
+        color: #1db954;
+    }
+
+    .progress-container {
+        width: 80%;
+        margin-top: 15px;
+    }
+
+    .progress-container input[type=range] {
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>My Playlist</h2>
+    <input type="text" placeholder="Search songs...">
+    <div class="song-list">
+        <div>Song 1 - Artist</div>
+        <div>Song 2 - Artist</div>
+        <div>Song 3 - Artist</div>
+        <div>Song 4 - Artist</div>
+        <div>Song 5 - Artist</div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="cover">
+        <img src="profile.jpg" alt="Album Cover">
+    </div>
+
+    <div class="song-info">
+        <h2>Song Title</h2>
+        <p>Artist Name</p>
+    </div>
+
+    <div class="progress-container">
+        <input type="range" value="0" min="0" max="100">
+    </div>
+
+    <div class="controls">
+        <button>⏮️</button>
+        <button>▶️</button>
+        <button>⏭️</button>
+    </div>
+</div>
+
+</body>
+</html>
